@@ -29,10 +29,13 @@ class ActivityController extends Controller
      */
     public function store(Request $request)
     {
-        $validated = $request->validate([
+        $activity = $request;
+        $activity['user_id'] = auth()->id();
+
+        $validated = $activity->validate([
             'type' => 'required|string|max:255',
             'user_id' => 'required|integer',
-            'datetime' => 'required|date',
+            'date' => 'required|date',
             'paid' => 'boolean',
             'notes' => 'nullable|string'
         ]);
@@ -48,10 +51,6 @@ class ActivityController extends Controller
     public function show(string $id)
     {
         $activity = Activity::find($id);
-
-        if (!$activity) {
-            return response()->json(['message' => 'Activity not found'], 404);
-        }
 
         return response()->json($activity, 200);
     }
@@ -73,20 +72,16 @@ class ActivityController extends Controller
      */
     public function update(Request $request, string $id)
     {
+        $activity = Activity::findOrFail($id);
+
         $validated = $request->validate([
-            'type' => 'sometimes|required|string|max:255',
-            'user_id' => 'sometimes|required|integer',
-            'datetime' => 'sometimes|required|date',
-            'paid' => 'sometimes|required|boolean',
+            'type' => 'required|string|max:255',
+            'date' => 'required|date',
             'notes' => 'nullable|string',
-            'satisfaction' => 'nullable|integer|min:0|max:10'
+            'satisfaction' => 'required|integer|min:0|max:10'
         ]);
 
-        $activity = Activity::find($id);
-
-        if (!$activity) {
-            return response()->json(['message' => 'Activity not found'], 404);
-        }
+        $validated['paid'] = $request->has('paid') ? true : false;
 
         $activity->update($validated);
 
@@ -99,10 +94,6 @@ class ActivityController extends Controller
     public function destroy(string $id)
     {
         $activity = Activity::find($id);
-
-        if (!$activity) {
-            return response()->json(['message' => 'Activity not found'], 404);
-        }
 
         $activity->delete();
 

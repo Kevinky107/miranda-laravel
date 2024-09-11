@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,18 +18,13 @@
                 <option value="windsurf">Windsurf</option>
                 <option value="kayak">Kayak</option>
                 <option value="atv">ATV</option>
-                <option value="hot_air_balloon">Hot Air Balloon</option>
+                <option value="hot air balloon">Hot Air Balloon</option>
             </select>
         </div>
 
         <div>
-            <label for="user_id">User ID</label>
-            <input type="number" name="user_id" id="user_id" required>
-        </div>
-
-        <div>
-            <label for="datetime">Date and Time</label>
-            <input type="datetime-local" name="datetime" id="datetime" required>
+            <label for="date">Date and Time</label>
+            <input type="datetime-local" name="date" id="date" required>
         </div>
 
         <div>

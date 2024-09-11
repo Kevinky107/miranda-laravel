@@ -16,8 +16,9 @@ return new class extends Migration
             $table->enum('type', ['surf', 'windsurf', 'kayak', 'atv', 'hot air balloon']);
             $table->unsignedBigInteger('user_id');
             $table->dateTime('date');
-            $table->boolval('paid')->default(false);
-            $table->integer('satisfaction')->nullable(null);
+            $table->boolean('paid')->default(false);
+            $table->string('notes')->nullable();
+            $table->integer('satisfaction')->nullable();
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');
