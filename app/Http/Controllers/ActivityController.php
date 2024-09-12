@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Activity;
+use Illuminate\Support\Facades\Auth;
 
 class ActivityController extends Controller
 {
@@ -12,7 +13,7 @@ class ActivityController extends Controller
      */
     public function index()
     {
-        $activities = Activity::all();
+        $activities = Auth::user()->activities()->get();
         return response()->json($activities, 200);
     }
 
@@ -50,7 +51,7 @@ class ActivityController extends Controller
      */
     public function show(string $id)
     {
-        $activity = Activity::find($id);
+        $activity = Auth::user()->activities()->where('id', $id)->first();
 
         return response()->json($activity, 200);
     }
@@ -60,7 +61,7 @@ class ActivityController extends Controller
      */
     public function edit(string $id)
     {
-        $activity = Activity::findOrFail($id);
+        $activity = Auth::user()->activities()->where('id', $id)->firstOrFail();
 
         return view('editActivity', [
             'activity' =>  $activity
@@ -72,7 +73,7 @@ class ActivityController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $activity = Activity::findOrFail($id);
+        $activity = Auth::user()->activities()->where('id', $id)->first();
 
         $validated = $request->validate([
             'type' => 'required|string|max:255',
@@ -93,7 +94,7 @@ class ActivityController extends Controller
      */
     public function destroy(string $id)
     {
-        $activity = Activity::find($id);
+        $activity = Auth::user()->activities()->where('id', $id)->first();
 
         $activity->delete();
 

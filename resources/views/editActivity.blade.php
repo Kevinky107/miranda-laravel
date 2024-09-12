@@ -56,5 +56,12 @@
             <button type="submit">Update</button>
         </div>
     </form>
+    <form action="{{ route('activities.destroy', $activity->id) }}" method="POST">
+        @csrf
+        @method('DELETE')
+        <div>
+            <button type="submit">Delete</button>
+        </div>
+    </form>
 </body>
 </html>
