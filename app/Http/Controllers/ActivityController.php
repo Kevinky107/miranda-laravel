@@ -14,7 +14,9 @@ class ActivityController extends Controller
     public function index()
     {
         $activities = Auth::user()->activities()->get();
-        return response()->json($activities, 200);
+        return view('activity/list', [
+            'activities' =>  $activities
+        ]);
     }
 
     /**
@@ -22,7 +24,7 @@ class ActivityController extends Controller
      */
     public function create()
     {
-        return view('createActivity');
+        return view('activity/create');
     }
 
     /**
@@ -43,7 +45,7 @@ class ActivityController extends Controller
 
         $activity = Activity::create($validated);
 
-        return response()->json($activity, 201);
+        return redirect()->action([ActivityController::class, 'index']);
     }
 
     /**
@@ -63,7 +65,7 @@ class ActivityController extends Controller
     {
         $activity = Auth::user()->activities()->where('id', $id)->firstOrFail();
 
-        return view('editActivity', [
+        return view('activity/edit', [
             'activity' =>  $activity
         ]);
     }
@@ -86,7 +88,7 @@ class ActivityController extends Controller
 
         $activity->update($validated);
 
-        return response()->json($activity, 200);
+        return redirect()->action([ActivityController::class, 'index']);
     }
 
     /**
@@ -98,6 +100,6 @@ class ActivityController extends Controller
 
         $activity->delete();
 
-        return response()->json(['message' => 'Activity deleted successfully'], 200);
+        return redirect()->action([ActivityController::class, 'index']);
     }
 }
