@@ -66,14 +66,14 @@
         <ol>
             <div id="id">Activity {{ $activity['id']}}</div>
             <ul>
-                <li>Type: {{ $activity['type']}}</li>
-                <li>Date: {{ $activity['date']}}</li>
-                <li>Paid: {{ $activity['paid'] == 0 ? "No" : "Yes"}}</li>
+                <li>Type:  {{ $activity['type']}}</li>
+                <li>Date:  {{ $activity['date']}}</li>
+                <li>Paid:  {{ $activity['paid'] == 0 ? "No" : "Yes"}}</li>
                 @if ($activity->notes)
-                    <li>Notes: {{ $activity['notes']}}</li>
+                    <li>Notes:  {{ $activity['notes']}}</li>
                 @endif
                 @if ($activity->satisfaction)
-                    <li>Satisfaction: {{ $activity['satisfaction']}}</li>
+                    <li>Satisfaction:  {{ $activity['satisfaction']}}</li>
                 @endif
             </ul>
         </ol>
