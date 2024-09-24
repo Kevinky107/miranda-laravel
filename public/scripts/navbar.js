@@ -4,7 +4,7 @@ const dropdown = document.getElementById("dropdown")
 const to_booking = document.getElementsByClassName("booking")
 
 logo.addEventListener("click", function(){
-    window.location.href = "home"
+    window.location.href = "/"
 })
 
 menu.addEventListener("click", function(){

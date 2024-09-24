@@ -49,7 +49,7 @@
             <h4>THE ULTIMATE LUXURY</h4>
             <h1>About Us</h1>
             <div class="return">
-                <p><a href="home">Home</a> | <span>About</span></p>
+                <p><a href="/">Home</a> | <span>About</span></p>
             </div>
         </header>
         <main>

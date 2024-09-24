@@ -2,34 +2,29 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ActivityController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\RoomController;
 use Illuminate\Support\Facades\Route;
-
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/home', function () {
-    return view('miranda/index');
-});
+Route::get('/', [RoomController::class, 'home'])->name('contact.home');
+
 Route::get('/about-us', function () {
     return view('miranda/about-us');
 });
-Route::get('/contact', function () {
-    return view('miranda/contact');
-});
+
+Route::get('/contact', [ContactController::class, 'create'])->name('contact.create');
+
 Route::get('/offers', function () {
     return view('miranda/offers');
 });
 Route::get('/room-details', function () {
     return view('miranda/room-details');
 });
-Route::get('/rooms', function () {
-    return view('miranda/rooms');
-});
+Route::get('/rooms', [RoomController::class, 'index'])->name('contact.index');
 
 
 Route::middleware('auth')->group(function () {

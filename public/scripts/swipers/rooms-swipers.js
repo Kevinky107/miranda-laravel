@@ -8,11 +8,7 @@ let slider = new Swiper('.swiper', {
     },
     breakpoints: {
         1000: {
-            slidesPerView: 3,
-            grid: {
-                fill: 'column',
-                rows: 1
-            },
+            slidesPerView: 1
         },
     },
 });

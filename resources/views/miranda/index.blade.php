@@ -107,6 +107,7 @@
                     <h1>Hand Picked Rooms</h1>
                     <div class="swiper swiper1">
                         <div class="swiper-wrapper">
+                        @foreach($rooms as $room)
                             <div class="swiper-slide">
                                 <picture>
                                     <img src="room/bed.svg">
@@ -121,54 +122,15 @@
                                     src="swiper/room1.jpg">
                                 <div class="slide-info">
                                     <div>
-                                        <h3>Minimal Duplex Room</h3>
+                                        <h3>{{$room->name}}</h3>
                                         <h5>Lorem ipsum dolor sit amet, consectetur
                                             adipisicing elit, sed do eiusmod tempor
                                             incididunt ut labore et dolore.</h5>
                                     </div>
-                                    <p><strong>$345</strong>/Night</p>
+                                    <p><strong>{{$room->offer}}</strong>/Night</p>
                                 </div>
                             </div>
-                            <div class="swiper-slide">
-                                <picture>
-                                    <img src="room/bed.svg">
-                                    <img src="room/wifi.svg">
-                                    <img src="room/car.svg">
-                                    <img src="room/cold.svg">
-                                    <img src="room/no-smoking.svg">
-                                    <img src="room/bar.svg">
-                                </picture>
-                                <img class="slide-image"
-                                    src="swiper/room2.jpg">
-                                <div class="slide-info">
-                                    <div>
-                                        <h3>Minimal Duplex Room</h3>
-                                        <h5>Lorem ipsum dolor sit amet, consectetur
-                                            adipisicing elit, sed do eiusmod tempor
-                                            incididunt ut labore et dolore.</h5>
-                                    </div>
-                                    <p><strong>$345</strong>/Night</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <picture>
-                                    <img src="room/bed.svg">
-                                    <img src="room/wifi.svg">
-                                    <img src="room/cold.svg">
-                                    <img src="room/no-smoking.svg">
-                                </picture>
-                                <img class="slide-image"
-                                    src="swiper/room3.jpg">
-                                <div class="slide-info">
-                                    <div>
-                                        <h3>Minimal Duplex Room</h3>
-                                        <h5>Lorem ipsum dolor sit amet, consectetur
-                                            adipisicing elit, sed do eiusmod tempor
-                                            incididunt ut labore et dolore.</h5>
-                                    </div>
-                                    <p><strong>$345</strong>/Night</p>
-                                </div>
-                            </div>
+                        @endforeach    
                         </div>
                         <div class="swiper-button-prev swiper-button-prev1"></div>
                         <div class="swiper-button-next swiper-button-next1"></div>
