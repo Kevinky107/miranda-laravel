@@ -54,17 +54,18 @@
         </header>
         <main>
             <section class="cards">
+            @foreach($rooms as $room)
                 <article class="card--offer">
                     <picture>
                         <img src="swiper/room3.jpg">
                         <div>
-                            <h3><strong>$500</strong>/Night</h3>
-                            <h2><strong>$345</strong>/Night</h2>
+                            <h3><strong>${{$room->price}}</strong>/Night</h3>
+                            <h2><strong>${{$room->offer}}</strong>/Night</h2>
                         </div>
                     </picture>
                     <div class="card--offer__info">
                         <h4>DOUBLE BED</h4>
-                        <h1>Luxury Double Bed</h1>
+                        <h1>{{$room->name}}</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend erit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                         <ul>
                             <li>
@@ -111,120 +112,7 @@
                         <button class="booking">BOOK NOW</button>
                     </div>
                 </article>
-                <article class="card--offer">
-                    <picture>
-                        <img src="swiper/room3.jpg">
-                        <div>
-                            <h3><strong>$500</strong>/Night</h3>
-                            <h2><strong>$345</strong>/Night</h2>
-                        </div>
-                    </picture>
-                    <div class="card--offer__info">
-                        <h4>DOUBLE BED</h4>
-                        <h1>Luxury Double Bed</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend erit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                        <ul>
-                            <li>
-                                <img src="offer-card/air.svg">
-                                <p>Air conditiones</p>
-                            </li>
-                            <li>
-                                <img src="offer-card/breakfast.svg">
-                                <p>Breakfast</p>
-                            </li>
-                            <li>
-                                <img src="offer-card/cleaning.svg">
-                                <p>Cleaning</p>
-                            </li>
-                            <li>
-                                <img src="offer-card/grocery.svg">
-                                <p>Grocery</p>
-                            </li>
-                            <li>
-                                <img src="offer-card/shop.svg">
-                                <p>Shop near</p>
-                            </li>
-                            <li>
-                                <img src="offer-card/wifi.svg">
-                                <p>High speed WiFi</p>
-                            </li>
-                            <li>
-                                <img src="offer-card/kitchen.svg">
-                                <p>Kitchen</p>
-                            </li>
-                            <li>
-                                <img src="offer-card/shower.svg">
-                                <p>Shower</p>
-                            </li>
-                            <li>
-                                <img src="offer-card/bed.svg">
-                                <p>Single bed</p>
-                            </li>
-                            <li>
-                                <img src="offer-card/towels.svg">
-                                <p>Towels</p>
-                            </li>
-                        </ul>
-                        <button class="booking">BOOK NOW</button>
-                    </div>
-                </article>
-                <article class="card--offer">
-                    <picture>
-                        <img src="swiper/room3.jpg">
-                        <div>
-                            <h3><strong>$500</strong>/Night</h3>
-                            <h2><strong>$345</strong>/Night</h2>
-                        </div>
-                    </picture>
-                    <div class="card--offer__info">
-                        <h4>DOUBLE BED</h4>
-                        <h1>Luxury Double Bed</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend erit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                        <ul>
-                            <li>
-                                <img src="offer-card/air.svg">
-                                <p>Air conditiones</p>
-                            </li>
-                            <li>
-                                <img src="offer-card/breakfast.svg">
-                                <p>Breakfast</p>
-                            </li>
-                            <li>
-                                <img src="offer-card/cleaning.svg">
-                                <p>Cleaning</p>
-                            </li>
-                            <li>
-                                <img src="offer-card/grocery.svg">
-                                <p>Grocery</p>
-                            </li>
-                            <li>
-                                <img src="offer-card/shop.svg">
-                                <p>Shop near</p>
-                            </li>
-                            <li>
-                                <img src="offer-card/wifi.svg">
-                                <p>High speed WiFi</p>
-                            </li>
-                            <li>
-                                <img src="offer-card/kitchen.svg">
-                                <p>Kitchen</p>
-                            </li>
-                            <li>
-                                <img src="offer-card/shower.svg">
-                                <p>Shower</p>
-                            </li>
-                            <li>
-                                <img src="offer-card/bed.svg">
-                                <p>Single bed</p>
-                            </li>
-                            <li>
-                                <img src="offer-card/towels.svg">
-                                <p>Towels</p>
-                            </li>
-                        </ul>
-                        <button class="booking">BOOK NOW</button>
-                    </div>
-                </article>
+            @endforeach
             </section>
             <section class="popular">
                 <h4>POPULAR LIST</h4>
@@ -232,6 +120,7 @@
                 <article class="rooms-slider">
                     <div class="swiper">
                         <div class="swiper-wrapper">
+                        @for ($i = 0; $i < 3; $i++)
                             <div class="swiper-slide">
                                 <div class="room">
                                     <img class="room__image"
@@ -246,52 +135,13 @@
                                             <img src="room/no-smoking.svg">
                                             <img src="room/bar.svg">
                                         </picture>
-                                        <h3>Minimal Duplex Room</h3>
+                                        <h3>{{$rooms[$i]->name}}</h3>
                                         <h5>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</h5>
-                                        <p>$345/Night<strong class="booking">Booking Now</strong></p>
+                                        <p>${{$rooms[$i]->offer}}/Night<strong class="booking">Booking Now</strong></p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-slide">
-                                <div class="room">
-                                    <img class="room__image"
-                                        src="swiper/room3.jpg">
-                                    <div class="room__info">
-                                        <picture>
-                                            <img src="room/bed.svg">
-                                            <img src="room/wifi.svg">
-                                            <img src="room/car.svg">
-                                            <img src="room/cold.svg">
-                                            <img src="room/gym.svg">
-                                            <img src="room/no-smoking.svg">
-                                            <img src="room/bar.svg">
-                                        </picture>
-                                        <h3>Minimal Duplex Room</h3>
-                                        <h5>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</h5>
-                                        <p>$345/Night<strong class="booking">Booking Now</strong></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="room">
-                                    <img class="room__image"
-                                        src="swiper/room3.jpg">
-                                    <div class="room__info">
-                                        <picture>
-                                            <img src="room/bed.svg">
-                                            <img src="room/wifi.svg">
-                                            <img src="room/car.svg">
-                                            <img src="room/cold.svg">
-                                            <img src="room/gym.svg">
-                                            <img src="room/no-smoking.svg">
-                                            <img src="room/bar.svg">
-                                        </picture>
-                                        <h3>Minimal Duplex Room</h3>
-                                        <h5>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</h5>
-                                        <p>$345/Night<strong class="booking">Booking Now</strong></p>
-                                    </div>
-                                </div>
-                            </div>
+                        @endfor
                         </div>
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>

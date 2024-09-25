@@ -18,12 +18,12 @@ Route::get('/about-us', function () {
 
 Route::get('/contact', [ContactController::class, 'create'])->name('contact.create');
 
-Route::get('/offers', function () {
-    return view('miranda/offers');
-});
+Route::get('/offers', [RoomController::class, 'offers'])->name('contact.offers');
+
 Route::get('/room-details', function () {
     return view('miranda/room-details');
 });
+
 Route::get('/rooms', [RoomController::class, 'index'])->name('contact.index');
 
 
