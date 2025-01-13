@@ -19,28 +19,28 @@
         <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-        <script src="./scripts/navbar.js" defer></script>
+        <script src="/scripts/navbar.js" defer></script>
     </head>
     <body class="room-details">
         <nav>
             <div class="navbar">
                 <div class="navbar__left">
-                    <img id="open" class="navbar__left__menu" src="public/menu.svg">
+                    <img id="open" class="navbar__left__menu" src="/menu.svg">
                     <div id="logo" class="navbar__left__logo">
-                        <img src="public/logo.svg">
-                        <img src="public/logo-text.svg">
+                        <img src="/logo.svg">
+                        <img src="/logo-text.svg">
                     </div>
                 </div>
                 <div class="navbar__right">
-                    <img src="public/profile.svg">
-                    <img src="public/search.svg">
+                    <img src="/profile.svg">
+                    <img src="/search.svg">
                 </div>
                 <div id="dropdown" class="nav-links--hide">
                     <ul>
-                        <li><a href="about-us">About Us</a></li>
-                        <li><a href="rooms">Rooms</a></li>
-                        <li><a href="offers">Offers</a></li>
-                        <li><a href="contact">Contact</a></li>
+                        <li><a href="/about-us">About Us</a></li>
+                        <li><a href="/rooms">Rooms</a></li>
+                        <li><a href="/offers">Offers</a></li>
+                        <li><a href="/contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -55,10 +55,10 @@
         <main>
             <section class="check">
                 <article class="card--details">
-                    <h4>DOUBLE BED</h4>
-                    <h1>Luxury Double Bed</h1>
-                    <h2><strong>$345</strong>/Night</h2>
-                    <img src="public/swiper/room3.jpg"/>
+                    <h4>{{$room->type}}</h4>
+                    <h1>{{$room->name}}</h1>
+                    <h2><strong>{{$room->price}}</strong>/Night</h2>
+                    <img src="/swiper/room3.jpg"/>
                     <form>
                         <h3>Check Availability</h3>
                         <p>Check In</p>
@@ -75,59 +75,59 @@
                 <article >
                     <ul>
                         <li>
-                            <img src="public/offer-card/air.svg">
+                            <img src="/offer-card/air.svg">
                             <p>Air conditiones</p>
                         </li>
                         <li>
-                            <img src="public/offer-card/breakfast.svg">
+                            <img src="/offer-card/breakfast.svg">
                             <p>Breakfast</p>
                         </li>
                         <li>
-                            <img src="public/offer-card/cleaning.svg">
+                            <img src="/offer-card/cleaning.svg">
                             <p>Cleaning</p>
                         </li>
                         <li>
-                            <img src="public/offer-card/grocery.svg">
+                            <img src="/offer-card/grocery.svg">
                             <p>Grocery</p>
                         </li>
                         <li>
-                            <img src="public/offer-card/shop.svg">
+                            <img src="/offer-card/shop.svg">
                             <p>Shop near</p>
                         </li>
                         <li>
-                            <img src="public/offer-card/support.svg">
+                            <img src="/offer-card/support.svg">
                             <p>24/7 Online Support</p>
                         </li>
                         <li>
-                            <img src="public/offer-card/security.svg"/>
+                            <img src="/offer-card/security.svg"/>
                             <p>Smart Security</p>
                         </li>
                         <li>
-                            <img src="public/offer-card/wifi.svg">
+                            <img src="/offer-card/wifi.svg">
                             <p>High speed WiFi</p>
                         </li>
                         <li>
-                            <img src="public/offer-card/kitchen.svg">
+                            <img src="/offer-card/kitchen.svg">
                             <p>Kitchen</p>
                         </li>
                         <li>
-                            <img src="public/offer-card/shower.svg">
+                            <img src="/offer-card/shower.svg">
                             <p>Shower</p>
                         </li>
                         <li>
-                            <img src="public/offer-card/bed.svg">
+                            <img src="/offer-card/bed.svg">
                             <p>Single bed</p>
                         </li>
                         <li>
-                            <img src="public/offer-card/towels.svg">
+                            <img src="/offer-card/towels.svg">
                             <p>Towels</p>
                         </li>
                         <li>
-                            <img src="public/offer-card/locker.svg">
+                            <img src="/offer-card/locker.svg">
                             <p>Strong Locker</p>
                         </li>
                         <li>
-                            <img src="public/offer-card/team.svg">
+                            <img src="/offer-card/team.svg">
                             <p>Expert Team</p>
                         </li>
                     </ul>
@@ -135,7 +135,7 @@
             </section>
             <section class="autor">
                 <div class="image">
-                    <img src="public/verfication.svg"/>
+                    <img src="/verfication.svg"/>
                 </div>
                 <h2>Kevin Agudo Montil</h2>
                 <h4>FOUNDER, QUX CO.</h4>
@@ -153,16 +153,16 @@
                             <div class="swiper-slide">
                                 <div class="room">
                                     <img class="room__image"
-                                        src="public/swiper/room3.jpg">
+                                        src="/swiper/room3.jpg">
                                     <div class="room__info">
                                         <picture>
-                                            <img src="public/room/bed.svg">
-                                            <img src="public/room/wifi.svg">
-                                            <img src="public/room/car.svg">
-                                            <img src="public/room/cold.svg">
-                                            <img src="public/room/gym.svg">
-                                            <img src="public/room/no-smoking.svg">
-                                            <img src="public/room/bar.svg">
+                                            <img src="/room/bed.svg">
+                                            <img src="/room/wifi.svg">
+                                            <img src="/room/car.svg">
+                                            <img src="/room/cold.svg">
+                                            <img src="/room/gym.svg">
+                                            <img src="/room/no-smoking.svg">
+                                            <img src="/room/bar.svg">
                                         </picture>
                                         <h3>Minimal Duplex Room</h3>
                                         <h5>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</h5>
@@ -173,16 +173,16 @@
                             <div class="swiper-slide">
                                 <div class="room">
                                     <img class="room__image"
-                                        src="public/swiper/room3.jpg">
+                                        src="/swiper/room3.jpg">
                                     <div class="room__info">
                                         <picture>
-                                            <img src="public/room/bed.svg">
-                                            <img src="public/room/wifi.svg">
-                                            <img src="public/room/car.svg">
-                                            <img src="public/room/cold.svg">
-                                            <img src="public/room/gym.svg">
-                                            <img src="public/room/no-smoking.svg">
-                                            <img src="public/room/bar.svg">
+                                            <img src="/room/bed.svg">
+                                            <img src="/room/wifi.svg">
+                                            <img src="/room/car.svg">
+                                            <img src="/room/cold.svg">
+                                            <img src="/room/gym.svg">
+                                            <img src="/room/no-smoking.svg">
+                                            <img src="/room/bar.svg">
                                         </picture>
                                         <h3>Minimal Duplex Room</h3>
                                         <h5>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</h5>
@@ -193,16 +193,16 @@
                             <div class="swiper-slide">
                                 <div class="room">
                                     <img class="room__image"
-                                        src="public/swiper/room3.jpg">
+                                        src="/swiper/room3.jpg">
                                     <div class="room__info">
                                         <picture>
-                                            <img src="public/room/bed.svg">
-                                            <img src="public/room/wifi.svg">
-                                            <img src="public/room/car.svg">
-                                            <img src="public/room/cold.svg">
-                                            <img src="public/room/gym.svg">
-                                            <img src="public/room/no-smoking.svg">
-                                            <img src="public/room/bar.svg">
+                                            <img src="/room/bed.svg">
+                                            <img src="/room/wifi.svg">
+                                            <img src="/room/car.svg">
+                                            <img src="/room/cold.svg">
+                                            <img src="/room/gym.svg">
+                                            <img src="/room/no-smoking.svg">
+                                            <img src="/room/bar.svg">
                                         </picture>
                                         <h3>Minimal Duplex Room</h3>
                                         <h5>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</h5>
@@ -219,19 +219,19 @@
         </main>
         <footer>
             <div class="footer-info">
-                <img src="public/background-geometric.png" class="background">
+                <img src="/background-geometric.png" class="background">
                 <div>
-                    <img src="public/logo-big.svg">
+                    <img src="/logo-big.svg">
                     <h4>Lorem ipsum dolor sit amet, consect etur adipisicing elit,
                         sed doing eius mod tempor incididunt ut labore et dolore
                         magna aliqua. Ut enim ad minim veniam, quis nostrud
                         exercitat ion ullamco laboris nisi.</h4>
                     <div class="footer-info__social">
-                        <img src="public/socials/fa.svg" />
-                        <img src="public/socials/tw.svg" />
-                        <img src="public/socials/be.svg" />
-                        <img src="public/socials/in.svg" />
-                        <img src="public/socials/yt.svg" />
+                        <img src="/socials/fa.svg" />
+                        <img src="/socials/tw.svg" />
+                        <img src="/socials/be.svg" />
+                        <img src="/socials/in.svg" />
+                        <img src="/socials/yt.svg" />
                     </div>
                 </div>
                 <div>
@@ -256,21 +256,21 @@
                 <div>
                     <h3>Contact Us.</h3>
                     <picture>
-                        <img src="public/contact-phone.svg">
+                        <img src="/contact-phone.svg">
                         <div>
                             <h4>Phone Number</h4>
                             <p>+34 616 42 20 58</p>
                         </div>
                     </picture>
                     <picture>
-                        <img src="public/contact-email.svg">
+                        <img src="/contact-email.svg">
                         <div>
                             <h4>Email Adress</h4>
                             <p>kevinagudomontil@gmail.com</p>
                         </div>
                     </picture>
                     <picture>
-                        <img src="public/contact-ubication.svg">
+                        <img src="/contact-ubication.svg">
                         <div>
                             <h4>Ubication</h4>
                             <p>València, València, 46020</p>
@@ -284,6 +284,6 @@
             </div>
         </footer>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <script src="scripts/swipers/room-details-swipers.js"></script>
+        <script src="/scripts/swipers/room-details-swipers.js"></script>
     </body>
 </html>

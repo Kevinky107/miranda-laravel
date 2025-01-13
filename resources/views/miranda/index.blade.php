@@ -55,7 +55,7 @@
         </header>
         <main>
             <section class="availability">
-                <form class="availability__form">
+                <form class="availability__form" action="{{ route('contact.index') }}">
                     <div>
                         <p>Arrival Date</p>
                         <input type="date">

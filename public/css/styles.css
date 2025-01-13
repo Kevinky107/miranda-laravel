@@ -398,8 +398,20 @@ nav {
   display: inline-flex;
   padding: 0;
 }
-.card--offer__info button {
+.card--offer__info a {
   margin-top: 1em;
+  text-decoration: none;
+  text-align: center;
+  background-color: rgb(190, 173, 142);
+  color: white;
+  font-family: "Archivo";
+  font-weight: 500;
+  font-size: 0.8rem;
+  letter-spacing: 0.2rem;
+  border: none;
+  display: block;
+  width: 15em;
+  padding-block: 2em;
 }
 
 .card--shadow2 {
@@ -3701,7 +3713,7 @@ footer .footer p {
   height: 10em;
   width: 10em;
   border-radius: 10em;
-  background-image: url("../public/yo.jpeg");
+  background-image: url("../yo.jpeg");
   background-size: 10em;
   margin-bottom: 1em;
 }

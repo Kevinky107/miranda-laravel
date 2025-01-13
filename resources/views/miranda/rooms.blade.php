@@ -76,7 +76,7 @@
                                     </picture>
                                     <h3>{{$room->name}}</h3>
                                     <h5>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</h5>
-                                    <p>${{$room->offer}}/Night<strong class="booking">Booking Now</strong></p>
+                                    <p>${{$room->offer}}/Night<strong onclick="{ route('rooms.show', $room->id) }">Booking Now</strong></p>
                                 </div>
                             </div>
                         <div>

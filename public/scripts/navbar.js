@@ -19,5 +19,5 @@ menu.addEventListener("click", function(){
 
 for(let i = 0; i < to_booking.length; i++)
     to_booking[i].addEventListener("click", function(){
-        window.location.href = "room-details"
+        window.location.href = "rooms"
     })

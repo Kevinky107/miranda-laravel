@@ -24,6 +24,8 @@ Route::get('/room-details', function () {
     return view('miranda/room-details');
 });
 
+Route::get('/room/{room}', [RoomController::class, 'show'])->name('room.show');
+
 Route::get('/rooms', [RoomController::class, 'index'])->name('contact.index');
 
 

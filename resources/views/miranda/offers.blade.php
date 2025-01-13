@@ -109,7 +109,7 @@
                                 <p>Towels</p>
                             </li>
                         </ul>
-                        <button class="booking">BOOK NOW</button>
+                        <a href="{{ route('room.show', ['room' => $room->name]) }}">BOOK NOW</a>
                     </div>
                 </article>
             @endforeach

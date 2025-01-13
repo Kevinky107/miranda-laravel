@@ -18,6 +18,11 @@ class Room extends Model
         'available'
     ];
 
+    public function getRouteKeyName()
+    {
+        return 'name';
+    }
+
     public function rooms_image(): HasMany
     {
         return $this->hasMany(Rooms_image::class);
